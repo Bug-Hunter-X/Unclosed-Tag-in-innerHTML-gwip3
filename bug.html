@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML to add an element with a missing closing tag
+    document.getElementById('myDiv').innerHTML = "<p>This paragraph is fine.<p><p>This paragraph is missing its closing tag</p>";
+  </script>
+</body>
+</html>

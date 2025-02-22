@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Correctly add elements using createElement and appendChild.
+    const paragraph1 = document.createElement("p");
+    paragraph1.textContent = "This paragraph is fine.";
+    const paragraph2 = document.createElement("p");
+    paragraph2.textContent = "This paragraph has a closing tag.";
+    document.getElementById('myDiv').appendChild(paragraph1);
+    document.getElementById('myDiv').appendChild(paragraph2);
+  </script>
+</body>
+</html>
